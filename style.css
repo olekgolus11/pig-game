@@ -1,0 +1,105 @@
+body {
+    background: linear-gradient(150deg, rgb(224, 65, 216), rgb(199, 212, 161));
+    font-family: "Quicksand", sans-serif;
+}
+
+.board {
+    margin: 8rem auto;
+    width: 90%;
+    max-width: 60rem;
+    max-height: 40rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+.section {
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+    transition-duration: 1s;
+}
+.section-active {
+    background: rgba(255, 255, 255, 0.4);
+    transition-duration: 1s;
+}
+.section-won {
+    background: hsla(303, 72%, 25%, 0.7);
+    transition-duration: 1s;
+}
+.section-lost {
+    filter: grayscale(100%);
+    transition-duration: 1s;
+}
+.left-section {
+    border-radius: 0.4rem 0 0 0.4rem;
+}
+.right-section {
+    border-radius: 0 0.4rem 0.4rem 0;
+}
+.player {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: clamp(1rem, 9%, 5rem) 0;
+}
+.score {
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(224, 65, 216);
+    font-size: 4rem;
+    margin: 10% 0 30% 0;
+}
+.current-container {
+    color: rgb(255, 255, 255);
+    background: rgb(224, 65, 216);
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    padding: 5%;
+    margin: auto auto clamp(1rem, 9%, 5rem) auto;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+}
+.current-text {
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+.current-score {
+    margin: 5%;
+    font-size: 2rem;
+    text-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+button {
+    position: absolute;
+    width: auto;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.4);
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transition-duration: 0.1s;
+}
+button:active {
+    transform: translate(-50%, -45%);
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.4);
+}
+.btn-new-game {
+    margin-top: 5rem;
+}
+.btn-roll-dice {
+    margin-top: 22rem;
+}
+.btn-hold {
+    margin-top: 26rem;
+}
